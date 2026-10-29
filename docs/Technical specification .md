@@ -1,4 +1,4 @@
-#Tekninen määrittely -Movie Community
+# Tekninen määrittely -Movie Community
 Tila: Päivitellään vielä
 
 1. Yleiskuvaus 
