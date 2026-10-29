@@ -8,7 +8,30 @@
 
 ## Sprint Goal
 
-To be decided during Sprint Planning.
+- GitHub repository
+- README
+- Definition of Done
+- Sprint 1 documentation
+- GitHub Project Board
+- Product Goal
+- Scrum roles
+- Architecture Diagram
+- ERD
+- Technical Specification
+- React frontend foundation
+- Express backend foundation
+- PostgreSQL foundation
+- Docker setup
+- Requirements Specification
+- User Stories
+- Product Backlog
+- Sprint 1 Goal
+- Story Points
+- Tasks under User Stories
+- Frontend ↔ Backend connection
+- Backend ↔ PostgreSQL connection
+
+---
 
 ## Selected User Stories
 
