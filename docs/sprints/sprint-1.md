@@ -43,7 +43,42 @@ To be added after Sprint Planning.
 
 ## Sprint Review
 
-To be completed after the Sprint Review.
+# US-01: Project Documentation & Scrum Setup
+
+
+## User Story
+
+As a development team, we want to establish project documentation and Scrum practices so that we can organize, plan, and manage the Movie Community development process effectively.
+
+## Acceptance Criteria
+
+- [x] GitHub repository created and structured
+- [x] README completed
+- [x] Definition of Done documented
+- [x] Sprint 1 documentation created
+- [x] GitHub Project Board configured
+- [x] Product Goal defined
+- [x] Scrum roles and responsibilities assigned
+- [x] Product Backlog created
+- [x] User Stories created
+- [x] Sprint 1 Goal defined
+- [x] Story Points estimated
+- [x] Tasks created under User Stories
+
+## Tasks
+
+- [x] Set up GitHub repository structure
+- [x] Write README documentation
+- [x] Create Definition of Done
+- [x] Create Sprint 1 documentation
+- [x] Configure GitHub Project Board
+- [x] Define Product Goal
+- [x] Assign Scrum roles
+- [x] Create Product Backlog
+- [x] Add User Stories to GitHub
+- [x] Estimate Story Points
+- [x] Create tasks under User Stories
+- [x] Document Sprint 1 Goal
 
 ## Sprint Retrospective
 
