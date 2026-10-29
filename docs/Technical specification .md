@@ -1,0 +1,56 @@
+Tekninen määrittely -Movie Community
+Tila: Päivitellään vielä
+
+1. Yleiskuvaus 
+Movie Community on web-sovellus, jonka avulla kaveriporukat ja elokuvaharrastajat hakevat elokuvia, arvostelevat niitä ja jakavat suosituksia kerhoissa tai muille. 
+Sovellus koostuu kolmesta osasta:
+- Frontend: React-sovellus, joa käyttäjä käyttää selaimella
+- Backend: Express-rajapinta, joka hoitaa logiikan ja oikeudet
+- Tietokanta: PostgreSQL, johon tallennetaan käyttäjät, kerhot ja arvostelut
+Elokuvien Tiedot haetaan ulkoisesta TMBD-palvelusta.
+
+2. Teknologia
+Frontend - React + Vite
+Backend – Node.js + Express
+TIetokanta – PostgreSQL
+Elokuva data – TMDB
+Kontit – Docker Compose
+Versio hallinta – Github
+Julkaisu – Azure
+
+
+3. Arkkitehtuuri
+
+Selain puhuu vain backendille. Backend puhuu tietokannalla ja TMDB:lle.
+
+4. Tietokanta
+Elokuvia ei talleneta pmaan tietokantaan. Tallenetaan vai TMDB-tunniste ja tiedot haetaan TMDB:stä
+
+
+Users
+Käyttäjät. Salasana tallentaa tiivisteenä (`password_hash`)
+clubs
+Kerhot. `is_public` kertoo, voiko kerhon löytää haulla
+Cb_members
+Kuka kuuluu mihinkin kerhoon. `role` on `admin` tai `member`
+reviews
+ähtiarvostelut (1–5), kommentti ja aikaleima
+Lists
+Käyttäjän suosikit ja toivelista
+List_items
+Listoilla olevat elokuvat
+
+5. Kehitysympäristö
+
+1. Asenna Git ja Docker Desktop, ja käynnistä Docker Desktop.
+2. Kopioi `.env.example` tiedostoksi `.env`.
+3. Käynnistä komennolla `docker compose up --build`.
+4. Frontend: http://localhost:5173, backend: http://localhost:3000
+
+
+6. Myöhemmin täydennättävät
+
+- API-dokumentaatio (sprintti 2)
+- Tietoturva (kun kirjautuminen tehdään)
+- Käyttöönotto Azureen tai Renderiin (kun ympäristö on käytössä)
+- Testaus (kun testit tehdään)
