@@ -1,7 +1,10 @@
 # Tekninen määrittely -Movie Community
 Tila: Päivitellään vielä
 
-1. Yleiskuvaus 
+
+
+
+## 1. Yleiskuvaus 
 Movie Community on web-sovellus, jonka avulla kaveriporukat ja elokuvaharrastajat hakevat elokuvia, arvostelevat niitä ja jakavat suosituksia kerhoissa tai muille. 
 Sovellus koostuu kolmesta osasta:
 - Frontend: React-sovellus, joa käyttäjä käyttää selaimella
@@ -9,7 +12,10 @@ Sovellus koostuu kolmesta osasta:
 - Tietokanta: PostgreSQL, johon tallennetaan käyttäjät, kerhot ja arvostelut
 Elokuvien Tiedot haetaan ulkoisesta TMBD-palvelusta.
 
-2. Teknologia
+
+
+
+## 2. Teknologia
 Frontend - React + Vite
 Backend – Node.js + Express
 TIetokanta – PostgreSQL
@@ -19,7 +25,11 @@ Versio hallinta – Github
 Julkaisu – Azure
 
 
-3. Arkkitehtuuri
+
+
+
+## 3. Arkkitehtuuri
+Selain puhuu vain backendille. Backend puhuu tietokannalla ja TMDB:lle.
 ```mermaid
 flowchart LR
     User["User Browser"]
@@ -45,9 +55,8 @@ flowchart LR
     Express -->|SQL Queries| PostgreSQL
     Express -->|HTTPS / JSON| TMDB
 ```
-Selain puhuu vain backendille. Backend puhuu tietokannalla ja TMDB:lle.
 
-4. Tietokanta
+## 4. Tietokanta
 Elokuvia ei talleneta pmaan tietokantaan. Tallenetaan vai TMDB-tunniste ja tiedot haetaan TMDB:stä
 
 
@@ -64,7 +73,7 @@ Käyttäjän suosikit ja toivelista
 List_items
 Listoilla olevat elokuvat
 
-5. Kehitysympäristö
+## 5. Kehitysympäristö
 
 1. Asenna Git ja Docker Desktop, ja käynnistä Docker Desktop.
 2. Kopioi `.env.example` tiedostoksi `.env`.
@@ -72,7 +81,7 @@ Listoilla olevat elokuvat
 4. Frontend: http://localhost:5173, backend: http://localhost:3000
 
 
-6. Myöhemmin täydennättävät
+## 6. Myöhemmin täydennättävät
 
 - API-dokumentaatio (sprintti 2)
 - Tietoturva (kun kirjautuminen tehdään)
