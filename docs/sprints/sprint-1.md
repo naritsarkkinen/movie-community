@@ -43,14 +43,14 @@ To be added after Sprint Planning.
 
 ## Sprint Review
 
-# US-01: Project Documentation & Scrum Setup
+## US-01: Project Documentation & Scrum Setup
 
 
-## User Story
+### User Story
 
 As a development team, we want to establish project documentation and Scrum practices so that we can organize, plan, and manage the Movie Community development process effectively.
 
-## Acceptance Criteria
+### Acceptance Criteria
 
 - [x] GitHub repository created and structured
 - [x] README completed
@@ -65,7 +65,7 @@ As a development team, we want to establish project documentation and Scrum prac
 - [x] Story Points estimated
 - [x] Tasks created under User Stories
 
-## Tasks
+### Tasks
 
 - [x] Set up GitHub repository structure
 - [x] Write README documentation
