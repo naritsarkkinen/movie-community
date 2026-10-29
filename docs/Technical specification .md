@@ -20,7 +20,31 @@ Julkaisu – Azure
 
 
 3. Arkkitehtuuri
+```mermaid
+flowchart LR
+    User["User Browser"]
 
+    subgraph Frontend["Frontend"]
+        React["React SPA"]
+    end
+
+    subgraph Backend["Backend"]
+        Express["Express REST API"]
+    end
+
+    subgraph Database["Database"]
+        PostgreSQL[("PostgreSQL")]
+    end
+
+    subgraph ExternalServices["External Services"]
+        TMDB["TMDB API"]
+    end
+
+    User -->|Interacts with| React
+    React -->|HTTPS / JSON REST| Express
+    Express -->|SQL Queries| PostgreSQL
+    Express -->|HTTPS / JSON| TMDB
+```
 Selain puhuu vain backendille. Backend puhuu tietokannalla ja TMDB:lle.
 
 4. Tietokanta
