@@ -1,89 +1,100 @@
-# Tekninen määrittely -Movie Community
-Tila: Päivitellään vielä
+# Technical Specification – Movie Community
 
+**Status:** Work in Progress
 
+## 1. Overview
 
+Movie Community is a web application designed for groups of friends and movie enthusiasts to discover movies, write reviews, share recommendations, and participate in movie clubs.
 
-## 1. Yleiskuvaus 
-Movie Community on web-sovellus, jonka avulla kaveriporukat ja elokuvaharrastajat hakevat elokuvia, arvostelevat niitä ja jakavat suosituksia kerhoissa tai muille. 
-Sovellus koostuu kolmesta osasta:
-- Frontend: React-sovellus, joa käyttäjä käyttää selaimella
-- Backend: Express-rajapinta, joka hoitaa logiikan ja oikeudet
-- Tietokanta: PostgreSQL, johon tallennetaan käyttäjät, kerhot ja arvostelut
-Elokuvien Tiedot haetaan ulkoisesta TMBD-palvelusta.
+The application consists of three main components:
 
+1. **Frontend** – A React-based web application accessed through a browser.
+2. **Backend** – An Express.js REST API responsible for business logic, authentication, and authorization.
+3. **Database** – A PostgreSQL database used to store users, clubs, reviews, and user-created movie lists.
 
+Movie information is retrieved from the external **TMDB (The Movie Database) API**.
 
+---
 
-## 2. Teknologia
-Frontend - React + Vite
-Backend – Node.js + Express
-TIetokanta – PostgreSQL
-Elokuva data – TMDB
-Kontit – Docker Compose
-Versio hallinta – Github
-Julkaisu – Azure
+## 2. Technology Stack
 
+| Component | Technology |
+|------------|------------|
+| Frontend | React + Vite |
+| Backend | Node.js + Express |
+| Database | PostgreSQL |
+| Movie Data | TMDB API |
+| Containerization | Docker Compose |
+| Version Control | GitHub |
+| Deployment | Azure |
 
+---
 
+## 3. Architecture
 
+The client application communicates only with the backend API. The backend handles all business logic, database operations, and communication with external services.
 
-## 3. Arkkitehtuuri
-Selain puhuu vain backendille. Backend puhuu tietokannalla ja TMDB:lle.
 ```mermaid
 flowchart LR
-    User["User Browser"]
 
-    subgraph Frontend["Frontend"]
-        React["React SPA"]
-    end
+    A[Browser<br/>React Frontend]
+    B[Backend<br/>Express API]
+    C[(PostgreSQL)]
+    D[TMDB API]
 
-    subgraph Backend["Backend"]
-        Express["Express REST API"]
-    end
-
-    subgraph Database["Database"]
-        PostgreSQL[("PostgreSQL")]
-    end
-
-    subgraph ExternalServices["External Services"]
-        TMDB["TMDB API"]
-    end
-
-    User -->|Interacts with| React
-    React -->|HTTPS / JSON REST| Express
-    Express -->|SQL Queries| PostgreSQL
-    Express -->|HTTPS / JSON| TMDB
+    A -- HTTPS / JSON --> B
+    B -- SQL --> C
+    B -- HTTPS --> D
 ```
 
-## 4. Tietokanta
-Elokuvia ei talleneta pmaan tietokantaan. Tallenetaan vai TMDB-tunniste ja tiedot haetaan TMDB:stä
+---
+
+## 4. Database
+
+Movie data is not stored in the local database. Instead, the application stores the **TMDB movie ID**, and movie details are retrieved from the TMDB API when needed.
 
 
-Users
-Käyttäjät. Salasana tallentaa tiivisteenä (`password_hash`)
-clubs
-Kerhot. `is_public` kertoo, voiko kerhon löytää haulla
-Cb_members
-Kuka kuuluu mihinkin kerhoon. `role` on `admin` tai `member`
-reviews
-ähtiarvostelut (1–5), kommentti ja aikaleima
-Lists
-Käyttäjän suosikit ja toivelista
-List_items
-Listoilla olevat elokuvat
 
-## 5. Kehitysympäristö
+## 5. Development Environment
 
-1. Asenna Git ja Docker Desktop, ja käynnistä Docker Desktop.
-2. Kopioi `.env.example` tiedostoksi `.env`.
-3. Käynnistä komennolla `docker compose up --build`.
-4. Frontend: http://localhost:5173, backend: http://localhost:3000
+### Requirements
 
+- Git
+- Docker Desktop
 
-## 6. Myöhemmin täydennättävät
+### Setup
 
-- API-dokumentaatio (sprintti 2)
-- Tietoturva (kun kirjautuminen tehdään)
-- Käyttöönotto Azureen tai Renderiin (kun ympäristö on käytössä)
-- Testaus (kun testit tehdään)
+1. Install Git and Docker Desktop.
+2. Copy `.env.example` and rename it to `.env`.
+3. Start the application:
+
+```bash
+docker compose up --build
+```
+
+### Access URLs
+
+Frontend:
+
+```text
+http://localhost:5173
+```
+
+Backend:
+
+```text
+http://localhost:3000
+```
+
+---
+
+## 6. Future Additions
+
+The following sections will be expanded during future sprints:
+
+- API Documentation (Sprint 2)
+- Authentication and Security Design
+- Azure/Render Deployment Guide
+- Testing Documentation
+- CI/CD Pipeline Documentation
+- Performance and Scalability Considerations
