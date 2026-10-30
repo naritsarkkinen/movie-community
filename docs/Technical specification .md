@@ -1,4 +1,4 @@
-# Technical Specification – Movie Community
+# Technical Specification – MovieBus
 
 **Status:** Work in Progress
 
