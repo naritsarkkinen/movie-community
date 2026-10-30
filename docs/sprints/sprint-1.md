@@ -8,6 +8,10 @@
 
 ## Sprint Goal
 
+Establish the project foundation by defining requirements, setting up the development environment, and preparing the system architecture and Scrum workflow for future development.
+
+## Sprint 1 Tasks
+
 - GitHub repository
 - README
 - Definition of Done
